@@ -1,38 +1,47 @@
-# js-projects
-javascript projects
+# github pages，用github来做个人主页
 
-### 前学僧学员的个人网页(完成102项目请提交一个Pull request到这儿)
-- [我是占座的](http://baidu.com)
-- [newraina的个人介绍页](http://about.newraina.com)
-- [淡苍的个人介绍页](http://page.blackganglion.com)
+## 主要目的
+- 了解webpack
+- 建立个人主页来展示将来的项目
 
-### 提交Pull request的办法
-- fork这个repo，看见右上方的fork按钮了吗？点它。
-- 去你自己fork完的repo，点"Clone in Desktop"，或者你用命令行也可
-- 改代码，push到你自己fork完的repo
-- 然后在你自己fork完的repo里面点Pull requests -> New pull request
+## 使用方法
+- 如下
+```
+cd 102-github-pages
+npm install
+npm start
+# 然后访问http://localhost:8080/
+```
+要创建gh-pages的时候
+```
+npm run build
+git checkout -b gh-pages
+rm .gitignore
+git add .
+git commit
+git push origin gh-pages
+```
 
-### 如果觉得自己还需要巩固基本的javascript
-- [如果只看一本英文书来做JavaScript入门](http://eloquentjavascript.net/)。注意，例子是可以在线运行的。
-- [这个练习巩固语法](https://github.com/qianxueseng-com/javascript-koans)
-- [这个练习一些underscore的基本功能](https://github.com/qianxueseng-com/underbar)
+## 基本要求
+- 创建一个repo名字叫username.github.io，[github page官方文档](https://pages.github.com/)
+- 写很多html，一些css，一些js。主要将来用这个页面来展示你的项目和教育状况。从上到下分为，github名字，教育状况，项目。在项目部分，用类似于101的格子来展示你的个人项目。例如[这样](http://www.nancygarciafashion.com/)
+- 创建一个gh-pages的branch，这个branch下所有的东西都能在username.github.io被访问[参考但不要完全照搬详细的步骤](https://help.github.com/articles/creating-project-pages-manually/)
+- 使用webpack来生成文件
+- 使用SCSS来生成css
+- 使用CommonJs来把javascript拆成多个文件
 
-### 资源链接
-- [前端资源的祖师级列表](https://github.com/sindresorhus/awesome#front-end-development)
+## 额外要求
+- 配置webpack让其支持图片
+- 使用bootstrap作为css框架
+- 研究一个更复杂的webpack boilerplate repo
+- 了解`npm start`和`npm run build`的工作方式，加入一个自己的`npm run abc`命令
+- 买个域名并指向这个网站
 
-### 链接
-- [做项目，学前端的前学僧](http://qianxueseng.com/)
-- [知乎标签](http://www.zhihu.com/topic/20030239)
-- [微信群链接](https://github.com/qianxueseng-com/js-projects/issues/1)
+## 提交办法
+- 把网站链接作为pull request提交到`js-projects/README.md`
 
-### 期望的知识结构 [作为前端开发，需要具备怎样的能力？](http://www.zhihu.com/question/37077425)
-
-- 基本js语言没有问题，scope, closure
-- 基本的css，position, vertical align, media query
-- 基本的算法和数据结构，例如array, hashtable, basic tree, basic graph
-- 基本[网络工作方式](https://github.com/alex/what-happens-when)
-- 用backbone写过几个几千行的应用
-- 用node.js写过几个几千行的应用
-- 基本数据库
-- 用react或者angular或者ember写过一个几千行的应用
-- 良好的工作习惯，使用工具来编译js (gulp/webpack) 和css (gulp/sass)，严肃的对待测试 (mocha/chai)
+## 参考链接
+- http://www.jonathan-petitcolas.com/2015/05/15/howto-setup-webpack-on-es6-react-application-with-sass.html
+- https://github.com/webpack/webpack/issues/1548
+- https://github.com/ampedandwired/html-webpack-plugin
+- https://github.com/nihey/webpack-single-page-boilerplate
